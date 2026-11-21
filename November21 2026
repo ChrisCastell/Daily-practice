@@ -1,0 +1,27 @@
+expenses = {
+    "Food": 150,
+    "Transportation": 50,
+    "Entertainment": 80,
+    "Education": 120,
+    "Shopping": 100
+}
+
+# Calculate total
+total = sum(expenses.values())
+
+# Calculate average
+average = total / len(expenses)
+
+# Find the highest expense
+highest = max(expenses.values())
+
+# Find expenses greater than 100
+print("Expenses greater than 100:")
+
+for category, amount in expenses.items():
+    if amount > 100:
+        print(category, amount)
+
+print("Total:", total)
+print("Average:", average)
+print("Highest expense:", highest)
