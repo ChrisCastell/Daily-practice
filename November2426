@@ -1,0 +1,45 @@
+
+expenses = {
+    "Food": 250,
+    "Transportation": 80,
+    "Entertainment": 120,
+    "Education": 300,
+    "Shopping": 180,
+    "Healthcare": 90
+}
+
+# 1. Calculate total expenses
+total = sum(expenses.values())
+print(f"Total expenses: {total}")
+
+# 2. Calculate average expenses
+average = total / len(expenses)
+print(f"Average expenses: {average}")
+
+# 3. Find expenses greater than 150
+print("\nExpenses over 150:")
+
+for category, amount in expenses.items():
+    if amount > 150:
+        print(f"{category}: {amount}")
+
+# 4. Find the highest expense
+highest_category = max(expenses, key=expenses.get)
+highest_amount = expenses[highest_category]
+
+print(f"\nHighest category: {highest_category}")
+print(f"Highest amount: {highest_amount}")
+
+# 5. Classify each expense
+print("\nSpending classifications:")
+
+for category, amount in expenses.items():
+
+    if amount < 100:
+        print(f"{category}: Low spending")
+
+    elif 100 <= amount <= 200:
+        print(f"{category}: Moderate spending")
+
+    else:
+        print(f"{category}: High spending")
